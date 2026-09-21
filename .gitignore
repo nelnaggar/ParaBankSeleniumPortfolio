@@ -1,0 +1,21 @@
+# Maven output
+target/
+
+# Eclipse-generated files
+.classpath
+.project
+.settings/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+
+# Test evidence
+test-output/
+artifacts/
+*.log
+
+# Operating-system files
+.DS_Store
+Thumbs.db
