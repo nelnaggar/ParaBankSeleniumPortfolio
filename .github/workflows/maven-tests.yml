@@ -23,7 +23,7 @@ jobs:
           cache: maven
 
       - name: Run tests
-        run: mvn clean test -Dbrowser=chrome -Dheadless=true
+        run: mvn clean test -Dbrowser=chrome -Dheadless=false
 
       - name: Publish test reports
         if: always()
