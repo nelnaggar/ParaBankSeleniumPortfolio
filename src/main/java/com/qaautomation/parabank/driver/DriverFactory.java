@@ -59,11 +59,15 @@ public final class DriverFactory {
 
 		EdgeOptions options = new EdgeOptions();
 		
-		options.setBinary("C:\\Program Files (x86)\\Microsoft\\EdgeCore\\153.0.4234.32\\msedge.exe");
-
 		options.setExperimentalOption("prefs", Map.of("autofill.profile_enabled", false, "autofill.address_enabled",
 				false, "credentials_enable_service", false, "profile.password_manager_enabled", false));
-		
+
+		String edgeBinary = ConfigReader.getOptional("edge.binary");
+
+		if (edgeBinary != null && !edgeBinary.isBlank()) {
+			options.setBinary(edgeBinary);
+		}
+
 		if (headless) {
 			options.addArguments("--headless=new");
 		}

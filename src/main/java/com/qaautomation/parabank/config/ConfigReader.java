@@ -37,4 +37,14 @@ public final class ConfigReader {
 
 		return fileValue;
 	}
+	
+	public static String getOptional(String key) {
+	    String systemValue = System.getProperty(key);
+
+	    if (systemValue != null && !systemValue.isBlank()) {
+	        return systemValue;
+	    }
+
+	    return PROPERTIES.getProperty(key);
+	}
 }
