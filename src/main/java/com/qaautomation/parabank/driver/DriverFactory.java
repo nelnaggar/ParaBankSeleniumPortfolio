@@ -47,6 +47,7 @@ public final class DriverFactory {
 	private static WebDriver createFirefoxDriver(boolean headless) {
 
 		FirefoxOptions options = new FirefoxOptions();
+		
 
 		if (headless) {
 			options.addArguments("-headless");
